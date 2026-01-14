@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Life Problem Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Daily Life Problem Solver</h1>
+        <p>Manage Time, Money & Tasks in One Place</p>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+    <button class="nav-btn active" onclick="showSection('budget', this)">Budget Planner</button>
+    <button class="nav-btn" onclick="showSection('tasks', this)">Task Tracker</button>
+    <button class="nav-btn" onclick="showSection('timetable', this)">Study Timetable</button>
+    <button onclick="toggleDark()" id="darkToggle">🌙 Dark</button>
+
+
+</nav>
+
+
+    <!-- Budget Section -->
+    <section id="budget" class="box">
+    <h2>Budget Planner</h2>
+<button onclick="resetBudget()">Reset Budget</button>
+
+    <input type="number" id="income" placeholder="Enter Income">
+    <button onclick="saveIncome()">Save Income</button>
+
+    <br><br>
+
+    <input type="number" id="expenseInput" placeholder="Enter Expense">
+    <button onclick="addExpense()">Add Expense</button>
+
+    <h3>Total Expense: ₹<span id="totalExpense">0</span></h3>
+    <h3>Balance: ₹<span id="balance">0</span></h3>
+</section>
+
+    <!-- Task Section -->
+    <section id="tasks" class="box">
+    <h2>Daily Task Tracker</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter new task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+</section>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable" class="box">
+    <h2>Study Timetable Generator</h2>
+
+    <input type="number" id="studyHours" placeholder="Total Study Hours">
+    <br><br>
+
+    <input type="text" id="subjects" placeholder="Subjects (comma separated)">
+    <br><br>
+
+    <button onclick="generateTimetable()">Generate Timetable</button>
+
+    <ul id="timetableList"></ul>
+</section>
+    <script src="script.js"></script>
+    <footer style="text-align:center; padding:15px; color:#555;">
+    © 2026 | Built by Shubham Bhone
+</footer>
+
+</body>
+</html>
